@@ -48,8 +48,15 @@
 
         <div class="summary-container">
           <div>
-            <h3>Overall rating</h3>
-            <p id="rating">4.8</p>
+            <h3>Rating</h3>
+            <div class="rating">
+              <span class="stars" id="star-1" >&#9734;</span>
+              <span class="stars" id="star-2">&#9734;</span>
+              <span class="stars" id="star-3">&#9734;</span>
+              <span class="stars" id="star-4">&#9734;</span>
+              <span class="stars" id="star-5">&#9734;</span>
+            </div>
+            <div class="rating-number"></div>
           </div>
         </div>
       </div>
@@ -60,9 +67,10 @@
           type="text"
           placeholder="Write your review here ..."
         />
-        <button id="writeButton">Sumbit your review</button>
+        <button id="writeButton">Submit your review</button>
 
         <select class="selectButton" name="" id="select">
+          <option value="Default" selected>Choose an agency</option>
           <option value="Upwork">Upwork</option>
           <option value="Amazon">Amazon</option>
           <option value="Google">Google</option>
