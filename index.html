@@ -16,102 +16,102 @@
 
       <div class="widget-container">
         <div class="navigation-header">
-          <button class="nav-buttons" id="allReviewsButton">All reviews</button>
-          <button class="nav-buttons" id="upworkButton">Upwork</button>
-          <button class="nav-buttons" id="googleButton">Google</button>
-          <button class="nav-buttons" id="amazonButton">Amazon</button>
+          <button
+            class="nav-buttons"
+            id="allReviewsButton"
+            onclick="filterSelector('All reviews')"
+          >
+            All reviews
+          </button>
+          <button
+            class="nav-buttons"
+            id="upworkButton"
+            onclick="filterSelector('Upwork')"
+          >
+            Upwork
+          </button>
+          <button
+            class="nav-buttons"
+            id="googleButton"
+            onclick="filterSelector('Google')"
+          >
+            Google
+          </button>
+          <button
+            class="nav-buttons"
+            id="amazonButton"
+            onclick="filterSelector('Amazon')"
+          >
+            Amazon
+          </button>
         </div>
 
-        <div class="summary-header">
+        <div class="summary-container">
           <div>
             <h3>Overall rating</h3>
             <p id="rating">4.8</p>
           </div>
-          <button id="writeButton">Write a review</button>
         </div>
+      </div>
+
+      <div class="input-container">
+        <input
+          id="inputReview"
+          type="text"
+          placeholder="Write your review here ..."
+        />
+        <button id="writeButton">Sumbit your review</button>
+
+        <select class="selectButton" name="" id="select">
+          <option value="Upwork">Upwork</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Google">Google</option>
+        </select>
       </div>
 
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="user image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
+            <div class="user-info">
+              <img
+                class="user-image"
+                src="./images/profile1.webp"
+                alt="user image"
+              />
+              <h2 class="user-name">John Doe</h2>
+              <p class="user-profession">Full-stack developer</p>
+              <button class="messageButton">Get in touch</button>
+            </div>
+            <!-- input-to-js -->
+            <div id="inputsReview"></div>
           </div>
           <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
+            <div class="user-info">
+              <img
+                class="user-image"
+                src="./images/profile1.webp"
+                alt="user image"
+              />
+              <h2 class="user-name">Person's name</h2>
+              <p class="user-profession">designation goes here</p>
+              <button class="messageButton">Message</button>
+            </div>
+            <!-- input-to-js -->
+            <div id="inputsReview"></div>
           </div>
           <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
-          </div>
-          <div class="swiper-slide">
-            <img
-              class="user-image"
-              src="./images/profile1.webp"
-              alt="userx image"
-            />
-            <h2 class="user-name">Person's name</h2>
-            <p class="user-profession">designation goes here</p>
-            <button class="messageButton">Message</button>
+            <div class="user-info">
+              <img
+                class="user-image"
+                src="./images/profile1.webp"
+                alt="user image"
+              />
+              <h2 class="user-name">Person's name</h2>
+              <p class="user-profession">designation goes here</p>
+              <button class="messageButton">Message</button>
+            </div>
+            <!-- input-to-js -->
+            <div id="inputsReview"></div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
