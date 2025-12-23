@@ -162,6 +162,15 @@ h1 {
   height: 320px;
   overflow-x: scroll;
 }
+.default-inputs {
+  display: flex;
+  margin-left: 50px;
+  flex-direction: column;
+  color: #afacacf1;
+  opacity: 1;
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
 .user-image {
   width: 150px;
   height: 150px;

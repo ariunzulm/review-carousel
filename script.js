@@ -73,14 +73,13 @@ const addNewReview = () => {
     return;
   }
   const review = {
-    text: input,
-    select: selection,
+    text: input, // input text
+    select: selection, // Amazon
   };
   reviews.push(review);
-  console.log(review);
+
   cleanReviewInput();
-  renderReview();
-  filterSelector(review);
+  renderReview(reviews);
 };
 
 // ---
@@ -97,60 +96,47 @@ const createAReview = (review) => {
 };
 
 // ---
-const renderReview = () => {
+const renderReview = (reviewsArr) => {
   let reviewsHTML = "";
-  reviews.forEach((review) => {
+  reviewsArr.forEach((review) => {
     const reviewEach = createAReview(review);
 
     reviewsHTML = reviewsHTML + reviewEach;
   });
 
-  if (reviewsHTML !== "") {
-    inputsReview$.innerHTML = reviewsHTML;
-  } else if (reviewsHTML === "") {
-    alert("you can't submit");
-  }
+  inputsReview$.innerHTML = reviewsHTML;
 };
-// ---
-// if selected = upwork
+
+// ----
 const filterSelector = (selectOption) => {
-  let filteredReviews;
   if (selectOption === "All reviews") {
-    filteredReviews = reviews;
-    renderReview(filteredReviews);
+    renderReview(reviews);
     return;
-  } else {
-    filteredReviews = reviews.filter((review) => {
-      review.select === selectOption;
-      return;
-    });
-    renderReview(filteredReviews);
   }
+
+  const filteredReviews = reviews.filter((review) => {
+    return review.select === selectOption;
+  });
+
+  console.log("filteredReviews: ", filteredReviews);
+
+  renderReview(filteredReviews);
 };
+
 writeButton$.addEventListener("click", addNewReview);
 
 //   const userName = prompt("What is your name?");
 //   const userProfession = prompt("What is you designation?");
-//   if (selectOption === "Upwork") {
-//     const selectUpwork = reviews.filter((review) => {
-//       review.select === selectUpwork;
-//       return;
-//     });
-//     renderReview(selectUpwork);
-//   }
 
-//   if (selectOption === "Amazon") {
-//     const selectAmazon = reviews.filter((review) => {
-//       review.select === selectAmazon;
-//       return;
-//     });
-//     renderReview(selectAmazon);
-//   }
-
-//   if (selectOption === "Google") {
-//     const selectGoogle = reviews.filter((review) => {
+//  let filteredReviews;
+//   if (selectOption === "All reviews") {
+//     filteredReviews = reviews;
+//     renderReview(filteredReviews);
+//     return;
+//   } else {
+//     filteredReviews = reviews.filter((review) => {
 //       review.select === selectOption;
 //       return;
 //     });
-//     renderReview(selectGoogle);
+//     renderReview(filteredReviews);
 //   }
