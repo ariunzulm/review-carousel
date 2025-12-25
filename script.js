@@ -28,38 +28,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// ---
-
-// const starRating = (rating) => {
-//   for (let i = 1; i < 6; i++) {
-//     const star = stars$[i];
-//     if (i <= rating) {
-//         starOne.innerHTML=
-//     }
-//   }
-// };
-
-const updateStars = (rating) => {
-  // Loop from 1 to 5 to target each of your star IDs
-  for (let i = 1; i <= 5; i++) {
-    const star = document.getElementById(`star-${i}`);
-
-    if (i <= rating) {
-      star.innerHTML = "★"; // Filled star
-      star.classList.add("active"); // Add class for CSS coloring
-    } else {
-      star.innerHTML = "☆"; // Empty star
-      star.classList.remove("active");
-    }
-  }
-
-  // Update the numerical display next to the stars
-  const ratingNumber = document.querySelector(".rating-number");
-  if (ratingNumber) {
-    ratingNumber.innerText = `${rating}.0 / 5.0`;
-  }
-};
-
 let reviews = [];
 
 // ---
@@ -73,8 +41,8 @@ const addNewReview = () => {
     return;
   }
   const review = {
-    text: input, // input text
-    select: selection, // Amazon
+    text: input, 
+    select: selection, 
   };
   reviews.push(review);
 
@@ -127,16 +95,3 @@ writeButton$.addEventListener("click", addNewReview);
 
 //   const userName = prompt("What is your name?");
 //   const userProfession = prompt("What is you designation?");
-
-//  let filteredReviews;
-//   if (selectOption === "All reviews") {
-//     filteredReviews = reviews;
-//     renderReview(filteredReviews);
-//     return;
-//   } else {
-//     filteredReviews = reviews.filter((review) => {
-//       review.select === selectOption;
-//       return;
-//     });
-//     renderReview(filteredReviews);
-//   }
